@@ -1,18 +1,36 @@
 #!/bin/bash
 
+# Generate a random namespace ID
+nID=$(head -c 8 /dev/urandom | xxd -p)
+
+# Generate a random hex-encoded message
+hexdata=$(head -c 27 /dev/urandom | xxd -p)
+
+echo "Random hex-encoded namespace ID: $nID"
+echo "Random hex-encoded data: $hexdata"
+echo ""
+
 # Send a POST request and save the response in a variable
-response=$(curl -s -X POST -d '{"namespace_id": "0c204d39600fddd3",
-  "data": "f1f20ca8007e910a3bf8b2e61da0f26bca07ef78717a6ea54165f5",
-  "gas_limit": 80000, "fee": 2000}' http://localhost:26659/submit_pfb)
+echo "Sending a POST request..."
+response=$(curl -s -X POST -d '{"namespace_id": "'"$nID"'", "data": "'"$hexdata"'", "gas_limit": 80000, "fee": 2000}' http://localhost:26659/submit_pfb)
 
 # Extract the height and txhash values from the response
+echo $response | jq .
+echo ""
+
 height=$(echo $response | jq -r '.height')
 txhash=$(echo $response | jq -r '.txhash')
 
 # Send a GET request to retrieve data using the extracted height value
-data=$(curl -s -X GET http://localhost:26659/namespaced_shares/0c204d39600fddd3/height/$height)
+echo "Retrieving data based on POST results..."
+data=$(curl -s -X GET http://localhost:26659/namespaced_shares/"$nID"/height/"$height")
+
+echo $data | jq .
 
 # Print the results
+echo ""
+echo "Namespace ID: $nID"
+echo "Data: $hexdata"
 echo ""
 echo "Height: $height"
 echo "Transaction Hash: $txhash"
