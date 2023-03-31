@@ -6,7 +6,7 @@ wget https://raw.githubusercontent.com/inklbot/celestia-itn/main/blob.sh && sed 
 
 ## Example
 
-When you ran the `'blob.sh'`
+When you ran the `blob.sh`
 <br/><br/>
 <img width="80%" src="https://user-images.githubusercontent.com/31788091/229029309-50a1ebe6-e55f-48b1-bd72-9a78e5e17105.PNG"/>
 <br/>
