@@ -27,12 +27,16 @@ data=$(curl -s -X GET http://localhost:26659/namespaced_shares/"$nID"/height/"$h
 
 echo $data | jq .
 
-# Print the results
-echo ""
-echo "Namespace ID: $nID"
-echo "Data: $hexdata"
-echo ""
-echo "Height: $height"
-echo "Transaction Hash: $txhash"
-echo "https://testnet.mintscan.io/celestia-incentivized-testnet/txs/$txhash"
-echo ""
+# Print the results and save them to the log file
+{
+    echo "----------------------------------------------------------------------"
+    echo "Date and Time: $(date +"%Y-%m-%d %H:%M:%S")"
+    echo ""
+    echo "Namespace ID: $nID"
+    echo "Data: $hexdata"
+    echo ""
+    echo "Height: $height"
+    echo "Transaction Hash: $txhash"
+    echo "https://testnet.mintscan.io/celestia-incentivized-testnet/txs/$txhash"
+    echo "----------------------------------------------------------------------"
+} | tee -a output.log
