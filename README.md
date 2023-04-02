@@ -40,7 +40,9 @@ sudo apt install screen python3 python3-pip -y
 pip install flask
 ```
 <br/>
+
 Download `web_server.py`
+
 <br/>
 
 ```
@@ -48,7 +50,9 @@ wget https://raw.githubusercontent.com/inklbot/celestia-ITN-PayForBlob-Transacti
 ```
 
 <br/>
+
 Create `dashboard` folder and download index.html
+
 <br/>
 
 ```
@@ -66,6 +70,7 @@ screen -S web_server
 ```
 
 <br/>
+
 Run `web_server.py` in a split terminal
 
 <br/>
