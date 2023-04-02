@@ -68,8 +68,12 @@ Run `web_server.py` in a split terminal
 ```
 python3 web_server.py
 ```
+![image](https://user-images.githubusercontent.com/31788091/229338507-c71176c3-a864-466c-bc35-feaa0a216aab.png)
+<br/>
+Now you're all set.<br/>
 Then type `CTRL+A+D` simultaneously to return to the original terminal.
 
 <br/>
+
 
 ## Method_2 Example
