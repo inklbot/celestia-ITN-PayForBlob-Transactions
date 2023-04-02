@@ -5,6 +5,7 @@
 <br/>
 ## Method_1 guide
 
+#### Enter this command on the server running Celestia-node.
 ```
 wget https://raw.githubusercontent.com/inklbot/celestia-itn/main/blob.sh && sed -i 's/\r//' blob.sh && chmod +x blob.sh && sudo /bin/bash blob.sh
 ```
