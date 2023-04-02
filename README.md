@@ -85,3 +85,12 @@ Access the dashboard via the website at `http://<server-ip>:5000/`
 
 ![image](https://user-images.githubusercontent.com/31788091/229338614-590201da-ef78-498e-ac02-be02db80479a.png)
 
+<br/>
+`Execution` button executes PayForBlob transactions.
+<br/>
+
+![image](https://user-images.githubusercontent.com/31788091/229339589-a0a27947-13b2-4173-9e91-1076aca645ea.png)
+
+
+<br/>
+
