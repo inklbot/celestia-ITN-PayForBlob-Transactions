@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Execute PayForBlob transactions</title>
+
+<script>
+    async function executeCommand() 
+    {
+        const scriptContent = `
+        nID=$(head -c 8 /dev/urandom | xxd -p)
+        hexdata=$(head -c 27 /dev/urandom | xxd -p)
+        
+        echo "Random hex-encoded namespace ID: $nID"
+        echo "Random hex-encoded data: $hexdata"
+        echo ""
+        
+        response=$(curl -s -X POST -d '{"namespace_id": "'"$nID"'", "data": "'"$hexdata"'", "gas_limit": 80000, "fee": 2000}' http://localhost:26659/submit_pfb)
+        
+        echo $response | jq .
+        echo ""
+        
+        height=$(echo $response | jq -r '.height')
+        txhash=$(echo $response | jq -r '.txhash')
+        
+        echo "Retrieving data based on POST results..."
+        data=$(curl -s -X GET http://localhost:26659/namespaced_shares/"$nID"/height/"$height")
+        
+        echo $data | jq .
+        
+        {
+            echo "----------------------------------------------------------------------"
+            echo "Date and Time: $(date +"%Y-%m-%d %H:%M:%S")"
+            echo ""
+            echo "Namespace ID: $nID"
+            echo "Data: $hexdata"
+            echo ""
+            echo "Height: $height"
+            echo "Transaction Hash: $txhash"
+            echo "https://testnet.mintscan.io/celestia-incentivized-testnet/txs/$txhash"
+            echo "----------------------------------------------------------------------"
+        } | tee -a output.log`;
+  
+        const executeResponse = await fetch('/run_command', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: `command=${encodeURIComponent(scriptContent)}`
+        });
+
+        const outputElement = document.getElementById('output');
+        if (executeResponse.ok) {
+            const output = await executeResponse.text();
+            outputElement.textContent = '\n' + output;
+        } else {
+            outputElement.textContent = 'Error occurred';
+        }
+    }
+</script>
+
+</head>
+<body>
+    <h1>Execute PayForBlob transactions</h1>
+    <button onclick="executeCommand()">Execution</button>
+    <pre id="output" style="white-space: pre-wrap;"></pre>
+</body>
+</html>
