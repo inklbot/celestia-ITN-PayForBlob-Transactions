@@ -29,6 +29,7 @@ wget https://raw.githubusercontent.com/inklbot/celestia-itn/main/blob.sh && sed 
 ## Method_2 guide
 
 Install `screen, python3, pip` and install `flask` module
+<br/>
 
 ```
 sudo apt install screen python3 python3-pip -y
@@ -36,22 +37,30 @@ pip install flask
 ```
 <br/>
 Download `web_server.py`
+<br/>
 ```
 wget https://raw.githubusercontent.com/inklbot/celestia-ITN-PayForBlob-Transactions/main/web_server.py
 ```
+<br/>
 Create `dashboard` folder and download index.html
+<br/>
 ```
 mkdir dashboard
 cd dashboard
 wget https://raw.githubusercontent.com/inklbot/celestia-ITN-PayForBlob-Transactions/main/index.html
 ```
+<br/>
 Split terminal using screen
+<br/>
 ```
 screen -S web_server
 ```
+<br/>
 Run `web_server.py` in a split terminal
+<br/>
 ```
 python3 web_server.py
 ```
+<br/>
 
 ## Method_2 Example
