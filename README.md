@@ -27,4 +27,31 @@ wget https://raw.githubusercontent.com/inklbot/celestia-itn/main/blob.sh && sed 
 <br/>Go to tiascan and check the PayForBlob Count.
 
 ## Method_2 guide
+
+Install `screen, python3, pip` and install `flask` module
+
+```
+sudo apt install screen python3 python3-pip -y
+pip install flask
+```
+<br/>
+Download `web_server.py`
+```
+wget https://raw.githubusercontent.com/inklbot/celestia-ITN-PayForBlob-Transactions/main/web_server.py
+```
+Create `dashboard` folder and download index.html
+```
+mkdir dashboard
+cd dashboard
+wget https://raw.githubusercontent.com/inklbot/celestia-ITN-PayForBlob-Transactions/main/index.html
+```
+Split terminal using screen
+```
+screen -S web_server
+```
+Run `web_server.py` in a split terminal
+```
+python3 web_server.py
+```
+
 ## Method_2 Example
