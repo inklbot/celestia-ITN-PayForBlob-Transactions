@@ -1,10 +1,16 @@
-## Usage
+# Overview
+This guide provides two methods for running PayForBlob Transactions.
+Method_1 - CLI
+Method_1 - UI
+<br/>
+
+## Method_1 guide
 
 ```
 wget https://raw.githubusercontent.com/inklbot/celestia-itn/main/blob.sh && sed -i 's/\r//' blob.sh && chmod +x blob.sh && sudo /bin/bash blob.sh
 ```
 
-## Example
+## Method_1 Example
 
 <br/><br/>
 #### Run `blob.sh`
@@ -21,3 +27,6 @@ wget https://raw.githubusercontent.com/inklbot/celestia-itn/main/blob.sh && sed 
 <br/><br/>
 <img width="80%" src="https://user-images.githubusercontent.com/31788091/229029324-ac465602-c946-4425-9678-b712f963ccb4.PNG"/>
 <br/>Go to tiascan and check the PayForBlob Count.
+
+## Method_2 guide
+## Method_2 Example
