@@ -1,5 +1,5 @@
 # Overview
-This guide provides two methods for running PayForBlob Transactions.<br/>
+#### This guide provides two methods for running PayForBlob Transactions.<br/><br/>
 Method_1 - CLI<br/>
 Method_2 - UI<br/>
 <br/>
