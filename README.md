@@ -77,3 +77,8 @@ Then type `CTRL+A+D` simultaneously to return to the original terminal.
 
 
 ## Method_2 Example
+<br/>
+Access the dashboard via the website at `http://<server-ip>:5000/`
+<br/>
+![image](https://user-images.githubusercontent.com/31788091/229338614-590201da-ef78-498e-ac02-be02db80479a.png)
+
