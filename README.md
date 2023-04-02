@@ -38,9 +38,11 @@ pip install flask
 <br/>
 Download `web_server.py`
 <br/>
+
 ```
 wget https://raw.githubusercontent.com/inklbot/celestia-ITN-PayForBlob-Transactions/main/web_server.py
 ```
+
 <br/>
 Create `dashboard` folder and download index.html
 <br/>
