@@ -6,59 +6,51 @@
     <title>Execute PayForBlob transactions</title>
 
 <script>
-    async function executeCommand() 
-    {
-        const scriptContent = `
-        nID=$(head -c 8 /dev/urandom | xxd -p)
-        hexdata=$(head -c 27 /dev/urandom | xxd -p)
-        
-        echo "Random hex-encoded namespace ID: $nID"
-        echo "Random hex-encoded data: $hexdata"
-        echo ""
-        
-        response=$(curl -s -X POST -d '{"namespace_id": "'"$nID"'", "data": "'"$hexdata"'", "gas_limit": 80000, "fee": 2000}' http://localhost:26659/submit_pfb)
-        
-        echo $response | jq .
-        echo ""
-        
-        height=$(echo $response | jq -r '.height')
-        txhash=$(echo $response | jq -r '.txhash')
-        
-        echo "Retrieving data based on POST results..."
-        data=$(curl -s -X GET http://localhost:26659/namespaced_shares/"$nID"/height/"$height")
-        
-        echo $data | jq .
-        
-        {
-            echo "----------------------------------------------------------------------"
-            echo "Date and Time: $(date +"%Y-%m-%d %H:%M:%S")"
-            echo ""
-            echo "Namespace ID: $nID"
-            echo "Data: $hexdata"
-            echo ""
-            echo "Height: $height"
-            echo "Transaction Hash: $txhash"
-            echo "https://testnet.mintscan.io/celestia-incentivized-testnet/txs/$txhash"
-            echo "----------------------------------------------------------------------"
-        } | tee -a output.log`;
-  
-        const executeResponse = await fetch('/run_command', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },
-            body: `command=${encodeURIComponent(scriptContent)}`
-        });
+    async function executeCommand() {
+        const downloadResponse = await fetch('https://raw.githubusercontent.com/inklbot/celestia-itn/main/blob.sh');
+        if (downloadResponse.ok) {
+            const scriptContent = await downloadResponse.text();
 
-        const outputElement = document.getElementById('output');
-        if (executeResponse.ok) {
-            const output = await executeResponse.text();
-            outputElement.textContent = '\n' + output;
+            const scriptWithoutCarriageReturns = scriptContent.replace(/\r/g, '');
+
+            const deleteResponse = await fetch('/delete_file', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'path=blob.sh'
+            });
+
+            await fetch('/write_file', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: `path=blob.sh&content=${encodeURIComponent(scriptWithoutCarriageReturns)}`
+            });
+
+            const executeResponse = await fetch('/run_command', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                body: 'command=sudo /bin/bash blob.sh'
+            });
+
+            const outputElement = document.getElementById('output');
+            if (executeResponse.ok) {
+                const output = await executeResponse.text();
+                outputElement.textContent = '\n' + output;
+            } else {
+                outputElement.textContent = 'Error occurred';
+            }
         } else {
-            outputElement.textContent = 'Error occurred';
+            const outputElement = document.getElementById('output');
+            outputElement.textContent = 'Failed to download blob.sh file';
         }
     }
 </script>
+
 
 </head>
 <body>
