@@ -58,8 +58,10 @@ Split terminal using screen
 <br/>
 
 ```
-screen -S web_server
+screen -S web_server.py
 ```
+
+Then type `CTRL+A+D` simultaneously to return to the original terminal.
 
 <br/>
 Run `web_server.py` in a split terminal
