@@ -67,6 +67,7 @@ screen -S web_server
 
 <br/>
 Run `web_server.py` in a split terminal
+
 <br/>
 
 ```
