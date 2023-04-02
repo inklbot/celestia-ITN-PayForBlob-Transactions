@@ -59,6 +59,7 @@ Create `dashboard` folder and download index.html
 mkdir dashboard
 cd dashboard
 wget https://raw.githubusercontent.com/inklbot/celestia-ITN-PayForBlob-Transactions/main/index.html
+cd ..
 ```
 
 <br/>
