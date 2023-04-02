@@ -40,7 +40,7 @@ Download `web_server.py`
 <br/>
 
 ```
-wget https://raw.githubusercontent.com/inklbot/celestia-ITN-PayForBlob-Transactions/main/web_server.py
+wget https://raw.githubusercontent.com/inklbot/celestia-ITN-PayForBlob-Transactions/main/web_server.py https://raw.githubusercontent.com/inklbot/celestia-itn/main/blob.sh
 ```
 
 <br/>
