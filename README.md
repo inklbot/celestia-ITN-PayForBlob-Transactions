@@ -2,6 +2,8 @@
 #### This guide provides two methods for running PayForBlob Transactions.<br/><br/>
 [Method_1 - CLI](https://github.com/inklbot/celestia-ITN-PayForBlob-Transactions/blob/main/README.md#method_1-guide)<br/>
 The CLI version helps you create `PayForBlob Tx with` a simple one-line command on the server running celestia-node
+<br/>
+
 [Method_2 - UI](https://github.com/inklbot/celestia-ITN-PayForBlob-Transactions/blob/main/README.md#method_2-guide)<br/>
 The UI version helps you create `PayForBlob Tx` from anywhere after a simple setup on the server running celestia-node
 <br/>
