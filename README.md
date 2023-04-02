@@ -1,7 +1,7 @@
 # Overview
 #### This guide provides two methods for running PayForBlob Transactions.<br/><br/>
-Method_1 - CLI(https://github.com/inklbot/celestia-ITN-PayForBlob-Transactions/blob/main/README.md#method_1-guide)<br/>
-Method_2 - UI(https://github.com/inklbot/celestia-ITN-PayForBlob-Transactions/blob/main/README.md#method_2-guide)<br/>
+[Method_1 - CLI](https://github.com/inklbot/celestia-ITN-PayForBlob-Transactions/blob/main/README.md#method_1-guide)<br/>
+[Method_2 - UI](https://github.com/inklbot/celestia-ITN-PayForBlob-Transactions/blob/main/README.md#method_2-guide)<br/>
 <br/>
 ## Method_1 guide
 
