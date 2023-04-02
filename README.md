@@ -46,23 +46,29 @@ wget https://raw.githubusercontent.com/inklbot/celestia-ITN-PayForBlob-Transacti
 <br/>
 Create `dashboard` folder and download index.html
 <br/>
+
 ```
 mkdir dashboard
 cd dashboard
 wget https://raw.githubusercontent.com/inklbot/celestia-ITN-PayForBlob-Transactions/main/index.html
 ```
+
 <br/>
 Split terminal using screen
 <br/>
+
 ```
 screen -S web_server
 ```
+
 <br/>
 Run `web_server.py` in a split terminal
 <br/>
+
 ```
 python3 web_server.py
 ```
+
 <br/>
 
 ## Method_2 Example
