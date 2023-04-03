@@ -115,7 +115,7 @@ Access the dashboard via the website at `http://<server-ip>:5000/`
 
 <br/>
 
-## Method_3 guide(Written for Windows 10)
+## Method_3 guide(Windows 10)
 
 Requires Python3 and the paramiko, configparser, and tkinter modules.
 
