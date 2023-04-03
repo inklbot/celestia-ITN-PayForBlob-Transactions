@@ -115,3 +115,17 @@ Access the dashboard via the website at `http://<server-ip>:5000/`
 
 <br/>
 
+## Method_3 guide(Written for Windows 10)
+
+Requires Python3 and the paramiko, configparser, and tkinter modules.
+
+``` 
+pip install paramiko configparser tkinter
+```
+
+## Method_3 Example
+#### Run `PFB.py`
+
+![image](https://user-images.githubusercontent.com/31788091/229403056-b0499eb4-b157-4379-a32e-c3a7912926d6.png)
+
+Then click the `PFB Tx` button to execute the PayForBlob transaction.
