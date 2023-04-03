@@ -130,6 +130,8 @@ pip install paramiko configparser tkinter
 
 SSH connection information, except for the password, is then stored in `config.ini`
 
+![image](https://user-images.githubusercontent.com/31788091/229403747-65024fd8-9b5c-4322-93f4-e81c9cab0cbf.png)
+
 Then click the `PFB Tx` button to execute the PayForBlob transaction.
 
 ![image](https://user-images.githubusercontent.com/31788091/229403329-76115842-ed9b-4e93-977a-97ccf6eb836a.png)
