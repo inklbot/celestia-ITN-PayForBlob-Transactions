@@ -15,7 +15,7 @@ The CLI version helps you create `PayForBlob Tx` with a simple one-line command 
 The GUI version uses Python to connect to ssh and run PayForBlob Tx with a simple button
 <br/>
 
-Method_3 - GUI<br/>
+[Method_3 - GUI](https://github.com/inklbot/celestia-ITN-PayForBlob-Transactions/blob/main/README.md#method_3-guidewindows-10)<br/>
 The GUI version helps you create `PayForBlob Tx` from anywhere after a simple setup on the server running celestia-node
 <br/>
 ## Method_1 guide
