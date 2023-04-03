@@ -129,3 +129,9 @@ pip install paramiko configparser tkinter
 ![image](https://user-images.githubusercontent.com/31788091/229403056-b0499eb4-b157-4379-a32e-c3a7912926d6.png)
 
 Then click the `PFB Tx` button to execute the PayForBlob transaction.
+
+![image](https://user-images.githubusercontent.com/31788091/229403329-76115842-ed9b-4e93-977a-97ccf6eb836a.png)
+
+![image](https://user-images.githubusercontent.com/31788091/229403345-9acc1d19-3326-430d-9074-b62efbf960a1.png)
+
+That's it!
