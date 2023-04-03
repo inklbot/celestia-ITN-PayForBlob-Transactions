@@ -12,10 +12,14 @@ import subprocess
 @web_server.route('/run_command', methods=['POST'])
 def run_command():
     command = request.form.get('command')
+    if not os.path.isfile('blob.sh'):        
+        os.system('wget https://raw.githubusercontent.com/inklbot/celestia-itn/main/blob.sh')
+        
     process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
     stdout, stderr = process.communicate()
     
     if process.returncode == 0:
+        subprocess.Popen("rm blob.sh", shell=True)
         return f"PayForBlob transactions execution complete.\n\nResult:\n{stdout.decode('utf-8')}"
     else:
         return f"PayForBlob transactions execution failed.\nError:\n{stderr.decode('utf-8')}", 500
