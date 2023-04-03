@@ -2,7 +2,7 @@ This Github repository has already been submitted to Celestia ITN Bonus Tasks.
 <br/>
 Copying and using this repository may result in penalties from Celestia ITN, and you are solely responsible for those penalties.
 <br/>
-Copying and submitting assignments is not a good idea and should only be used for inspiration.
+So copying and submitting assignments is not a good idea and should only be used for inspiration.
 <br/>
 
 # Overview
