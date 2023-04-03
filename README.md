@@ -1,4 +1,4 @@
-This Github repository is a Celestia ITN Bonus Tasks submission
+This Github repository has already been submitted to Celestia ITN Bonus Tasks.
 <br/>
 Copying and using this repository may result in penalties from Celestia ITN, and you are solely responsible for those penalties.
 <br/>
