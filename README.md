@@ -1,3 +1,8 @@
+This Github repository is a Celestia ITN Bonus Tasks submission
+<br/>
+Copying and using this repository may result in penalties from Celestia ITN, and you are solely responsible for those penalties.
+<br/>
+
 # Overview
 #### This guide provides two methods for running PayForBlob Transactions.<br/><br/>
 [Method_1 - CLI](https://github.com/inklbot/celestia-ITN-PayForBlob-Transactions/blob/main/README.md#method_1-guide)<br/>
