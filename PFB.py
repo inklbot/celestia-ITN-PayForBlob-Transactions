@@ -14,7 +14,7 @@ try:
     username = config['SSH']['username']
     password = config['SSH']['password']
 except (FileNotFoundError, configparser.NoSectionError, KeyError):
-    config['SSH'] = {'hostname': '', 'port': '', 'username': '', 'password': ''}
+    config['SSH'] = {'hostname': '', 'port': '22', 'username': '', 'password': ''}
     with open('config.ini', 'w') as configfile:
         config.write(configfile)
     hostname = ''
@@ -31,7 +31,7 @@ hostname_entry = tk.Entry(root)
 hostname_entry.insert(0, config['SSH']['hostname'])
 hostname_entry.pack()
 
-port_label = tk.Label(root, text="Port number")
+port_label = tk.Label(root, text="Port(Default:22)")
 port_label.pack()
 port_entry = tk.Entry(root)
 port_entry.insert(0, config['SSH']['port'])
