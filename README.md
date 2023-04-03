@@ -120,7 +120,7 @@ Access the dashboard via the website at `http://<server-ip>:5000/`
 Requires Python3 and the paramiko, configparser, and tkinter modules.
 
 ``` 
-pip install paramiko configparser tkinter
+pip install paramiko configparser
 ```
 
 ## Method_3 Example
