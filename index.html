@@ -6,47 +6,23 @@
     <title>Execute PayForBlob transactions</title>
 
 <script>
-    async function executeCommand() {
-        const downloadResponse = await fetch('https://raw.githubusercontent.com/inklbot/celestia-itn/main/blob.sh');
-        if (downloadResponse.ok) {
-            const scriptContent = await downloadResponse.text();
+    async function executeCommand() 
+    {
+        const executeResponse = await fetch('/run_command', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: 'command=sudo /bin/bash blob.sh'
+        });
 
-            const scriptWithoutCarriageReturns = scriptContent.replace(/\r/g, '');
-
-            const deleteResponse = await fetch('/delete_file', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: 'path=blob.sh'
-            });
-
-            await fetch('/write_file', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: `path=blob.sh&content=${encodeURIComponent(scriptWithoutCarriageReturns)}`
-            });
-
-            const executeResponse = await fetch('/run_command', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                body: 'command=sudo /bin/bash blob.sh'
-            });
-
-            const outputElement = document.getElementById('output');
-            if (executeResponse.ok) {
-                const output = await executeResponse.text();
-                outputElement.textContent = '\n' + output;
-            } else {
-                outputElement.textContent = 'Error occurred';
-            }
+        const outputElement = document.getElementById('output');
+        if (executeResponse.ok) 
+        {
+            const output = await executeResponse.text();
+            outputElement.textContent = '\n' + output;
         } else {
-            const outputElement = document.getElementById('output');
-            outputElement.textContent = 'Failed to download blob.sh file';
+            outputElement.textContent = 'Error occurred';
         }
     }
 </script>
