@@ -5,6 +5,26 @@ Copying and using this repository may result in penalties from Celestia ITN, and
 So copying and submitting assignments is not a good idea and should only be used for inspiration.
 <br/>
 
+# PHASE 3 Guide
+#### This guide was written using Method 1 - CLI
+
+``` 
+wget https://raw.githubusercontent.com/inklbot/celestia-itn/main/blob.sh && sed -i 's/\r//' blob.sh && chmod +x blob.sh && sudo /bin/bash blob.sh
+```
+
+![image](https://user-images.githubusercontent.com/31788091/231226594-c5842947-6fae-4943-ac33-bc16b323f547.png)
+
+![image](https://user-images.githubusercontent.com/31788091/231224969-ff6fcf3e-dd30-43d5-8588-50cd87e1fb36.png)
+
+Using your web browser, navigate to the link below.
+
+![image](https://user-images.githubusercontent.com/31788091/231225852-836ffab8-8d91-480d-8f4f-81a77b054659.png)
+
+Check the signer and now go to Celestia Knack and go to the Account Settings page.
+
+![image](https://user-images.githubusercontent.com/31788091/231225999-5ce275d4-3f96-4e89-903a-dac70bc295bd.png)
+
+
 # Overview
 #### This guide provides two methods for running PayForBlob Transactions.<br/><br/>
 [Method_1 - CLI](https://github.com/inklbot/celestia-ITN-PayForBlob-Transactions/blob/main/README.md#method_1-guide)<br/>
