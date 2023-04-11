@@ -25,6 +25,12 @@ Make sure the Status is Success, and the signer matches the Wallet Address liste
 That's it!
 If everything is perfect, submit your Tx Hash
 
+### Errors
+
+![image](https://user-images.githubusercontent.com/31788091/231235593-b81baa71-5b86-40ca-bffd-0653b6918cce.png)
+
+`rpc error: code = NotFound desc ~` this error appears to be caused by the absence of assets in the wallet
+
 # Overview
 #### This guide provides two methods for running PayForBlob Transactions.<br/><br/>
 [Method_1 - CLI](https://github.com/inklbot/celestia-ITN-PayForBlob-Transactions/blob/main/README.md#method_1-guide)<br/>
