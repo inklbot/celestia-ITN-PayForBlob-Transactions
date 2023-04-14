@@ -47,6 +47,7 @@
     <script>
         async function executeCommand() 
         {
+            alert("The PFB transaction is in progress. Please wait for the result.");
             const executeResponse = await fetch('/run_command', {
                 method: 'POST',
                 headers: {
