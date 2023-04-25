@@ -16,6 +16,10 @@ The GUI version uses Python to connect to ssh and run PayForBlob Tx with a simpl
 [Method_3 - GUI](https://github.com/inklbot/celestia-ITN-PayForBlob-Transactions/blob/main/README.md#method_3-guidewindows-10)<br/>
 The GUI version helps you create `PayForBlob Tx` from anywhere after a simple setup on the server running celestia-node
 <br/>
+
+[Phase_3 Guide](https://github.com/inklbot/celestia-ITN-PayForBlob-Transactions/blob/main/README.md#phase-3-guide)<br/>
+<br/>
+
 ## Method_1 guide
 
 #### Enter this command on the server running Celestia-node.
